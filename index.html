@@ -1,93 +1,58 @@
-<html>
-  <head>
-    <title>Hivent</title>
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <style>
-      body {
-        background-color: #FFAB00;
-      }
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
 
-      h1 {
-        text-align: center;
-      }
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body>
 
-      h1 img {
-        width: 50%;
-        margin: 0 auto;
-        margin-top: 25%;
-      }
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 class="title"><img src="img/logo-white.svg" width="200px" alt="Hivent" /></h1>
+            </header>
+        </div>
 
-      form {
-        width: 50%;
-        margin: 0 auto;
-      }
+        <div class="main-container">
+            <div class="main wrapper clearfix">
 
-      form input[type="email"] {
-        width: 75%;
-        padding: 10px;
-        border: 1px solid rgba(255,255,255,.3);
-        background: rgba(255,255,255,.2);
-        color: rgba(255,255,255,.8);
-        font-size: 24px;
-      }
+                <article>
+                    <header>
+                        <h1>Get your services talking.</h1>
+                        <p>Iterate and reach your customers faster by adopting a <a href="http://www.reactivemanifesto.org/" target="_blank">Reactive Microservice Architecture</a>. We'll handle all the chatter.</p>
+                        <p>Hivent is a fully managed messaging platform built for tomorrow's Reactive applications. Get your services talking to each other in real-time in just minutes.</p>
+                    </header>
+                    <section>
+                        <form id="email-form" method="POST" action="https://formspree.io/bruno+hivent@brunoabrantes.com">
+                            <h2>Hivent is still in beta. Join the waiting list to be among the first to try it!</h2>
+                            <input type="email" name="email" placeholder="Your email address" />
+                            <button type="submit">Join Waiting List</button>
+                        </form>
+                    </section>
+                </article>
 
-      form button[type="submit"] {
-        width: 20%;
-        border: 1px solid rgba(255,255,255,.3);
-        color: white;
-        font-size: 24px;
-        font-weight: bold;
-        background: transparent;
-        height: 50px;
-        border-left: none;
-        position: relative;
-        top: -1px;
-        left: -5px;
-        cursor: pointer;
-      }
+                <aside>
+                    <img src="img/illustration.svg" />
+                </aside>
 
-      ::-webkit-input-placeholder { /* Chrome */
-        color: rgba(255,255,255,.5);
-      }
-      :-ms-input-placeholder { /* IE 10+ */
-        color: rgba(255,255,255,.5);
-      }
-      ::-moz-placeholder { /* Firefox 19+ */
-        color: rgba(255,255,255,.5);
-        opacity: 1;
-      }
-      :-moz-placeholder { /* Firefox 4 - 18 */
-        color: rgba(255,255,255,.5);
-        opacity: 1;
-      }
-    </style>
-  </head>
-  <body>
-    <h1><img src="assets/img/logo-white.svg" /></h1>
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
 
-    <form id="email-form" method="POST" action="https://formspree.io/bruno+hivent@brunoabrantes.com">
-      <input type="email" name="email" placeholder="Your email address" />
-      <button type="submit">Sign Up</button>
-    </form>
+        <div class="footer-container">
+            <footer class="wrapper">
+            </footer>
+        </div>
 
-    <script type="text/javascript">
-      var colors = ["#A566D1", "#FFAB00", "#E96253", "#58E686"];
-      var darkColors = ["#5C009E", "#EB750C", "#EB210C", "#3BAD5E"];
-      var colorCode = Math.round(Math.random() * (colors.length - 1));
-      var color = colors[colorCode];
-      var darkColor = darkColors[colorCode];
-
-      document.querySelector('body').style.backgroundColor = color;
-
-      var emailRegex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
-
-      document.querySelector('#email-form').addEventListener('submit', function(evt) {
-        var email = document.querySelector('#email-form input[type="email"]').value;
-
-        if (!email.match(emailRegex)) {
-          evt.preventDefault();
-        }
-      });
-    </script>
-  </body>
+        <script src="js/main.js"></script>
+    </body>
 </html>
